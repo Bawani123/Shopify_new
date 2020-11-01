@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "989598488724",
+    "firebase_url": "https://shopyfy-f52f0.firebaseio.com",
+    "project_id": "shopyfy-f52f0",
+    "storage_bucket": "shopyfy-f52f0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989598488724:android:0b5a3c01d6ebf671d9fc81",
+        "android_client_info": {
+          "package_name": "com.example.shopyfy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989598488724-at4ql34bfqsiq1ucn25d5l03m6i8vtqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shopyfy",
+            "certificate_hash": "71d9f6d518f323d6cf9364c9fef0c6cf192a250f"
+          }
+        },
+        {
+          "client_id": "989598488724-utr7n92uj7571k6jn23b9poia1jo1abk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjOrElR_rvmVouXlWHNytmMO6BexgW15Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "989598488724-utr7n92uj7571k6jn23b9poia1jo1abk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
