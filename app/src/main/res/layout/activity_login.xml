@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login1"
+    android:background="@drawable/login2"
     tools:context=".LoginActivity">
     
     <ImageView
@@ -14,9 +14,9 @@
         android:layout_height="100dp"
 
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="200dp"
         />
-    
+
     
     <EditText
         android:id="@+id/login_phone_number_input"
