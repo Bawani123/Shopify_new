@@ -104,7 +104,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
     {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode==GalleryPick && requestCode==RESULT_OK && data!=null)
+        if (resultCode==RESULT_OK  &&  requestCode==GalleryPick  &&  data!=null)
         {
             ImageUri = data.getData();
             InputProductImage.setImageURI(ImageUri);
@@ -148,10 +148,11 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
         Calendar calendar = Calendar.getInstance();
 
-        SimpleDateFormat currentDate = new SimpleDateFormat( "MMM dd, YYYY");
+
+        SimpleDateFormat currentDate = new SimpleDateFormat("MM dd, yyyy");
         saveCurrentDate = currentDate.format(calendar.getTime());
 
-        SimpleDateFormat currentTime = new SimpleDateFormat( "HH:mm:ss a");
+        SimpleDateFormat currentTime = new SimpleDateFormat( "HH:mm:ss");
         saveCurrentTime = currentTime.format(calendar.getTime());
 
         productRandomKey = saveCurrentDate + saveCurrentTime;
@@ -185,6 +186,7 @@ public class AdminAddNewProductActivity extends AppCompatActivity {
 
                         downloadImageUrl = filePath.getDownloadUrl().toString();
                         return filePath.getDownloadUrl();
+
                     }
                 }).addOnCompleteListener(new OnCompleteListener<Uri>() {
                     @Override
