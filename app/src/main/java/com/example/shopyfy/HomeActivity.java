@@ -80,6 +80,7 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navigationView.bringToFront();
 
 
         View headerView = navigationView.getHeaderView(0);
@@ -208,7 +209,8 @@ public class HomeActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_settings)
         {
-
+            Intent intent = new Intent(HomeActivity.this, SettinsActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_logout)
         {
