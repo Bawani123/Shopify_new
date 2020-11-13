@@ -54,7 +54,7 @@ public class HomeActivity extends AppCompatActivity
 
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
-        //Paper.init(this);
+        Paper.init(this);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("Home");
@@ -89,6 +89,7 @@ public class HomeActivity extends AppCompatActivity
 
         userNameTextView.setText(Prevalent.currentOnlineUser.getName());
         //Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
+        Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 
         recyclerView = findViewById(R.id.recycler_menu);
         recyclerView.setHasFixedSize(true);
@@ -118,6 +119,7 @@ public class HomeActivity extends AppCompatActivity
                             Picasso.get().load(model.getImage()).into(holder.imageView);
 
                         }
+
 
                         @NonNull
                         @Override
