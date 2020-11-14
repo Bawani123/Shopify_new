@@ -98,7 +98,7 @@ public class LoginActivity extends AppCompatActivity {
         else
         {
             loadingBar.setTitle("Login Account");
-            loadingBar.setMessage("please wait,while we are checking the credentials");
+            loadingBar.setMessage("please wait, while we are checking the credentials");
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -145,6 +145,7 @@ public class LoginActivity extends AppCompatActivity {
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
 
