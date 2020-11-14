@@ -56,7 +56,7 @@ public class SettinsActivity extends AppCompatActivity
         setContentView(R.layout.activity_settins);
 
         storageProfilePictureRef = FirebaseStorage.getInstance().getReference().child("Profile pictures");
-        //storageProfilePictureRef = getInstance().getReference().child("Profile pictures");
+
 
         profileImageView = (CircleImageView) findViewById(R.id.settings_profile_image);
         fullNameEditText = (EditText) findViewById(R.id.settings_full_name);
