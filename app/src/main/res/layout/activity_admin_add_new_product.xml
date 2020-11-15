@@ -13,7 +13,7 @@
         android:layout_height="200dp"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:src="@drawable/select_product_image"
+        android:src="@drawable/tt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
 
