@@ -150,5 +150,4 @@ public class ProductDetailsActivity extends AppCompatActivity
             }
         });
     }
-    // comment
 }
