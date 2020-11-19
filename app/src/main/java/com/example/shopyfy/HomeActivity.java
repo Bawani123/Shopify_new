@@ -64,10 +64,10 @@ public class HomeActivity extends AppCompatActivity
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-
-                        .setAction("Action", null).show();
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -209,7 +209,8 @@ public class HomeActivity extends AppCompatActivity
 
         if (id == R.id.nav_cart)
         {
-
+            Intent intent = new Intent(HomeActivity.this, CartActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_orders)
         {
