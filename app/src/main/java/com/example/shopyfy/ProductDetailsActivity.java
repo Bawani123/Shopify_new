@@ -37,7 +37,7 @@ public class ProductDetailsActivity extends AppCompatActivity
     private ImageView productImage;
     private ElegantNumberButton numberButton;
     private TextView productPrice, productDescription, productName;
-    private String productID = "";
+    private String productID = "",state = "Normal";
 
 
 
@@ -63,17 +63,32 @@ public class ProductDetailsActivity extends AppCompatActivity
             @Override
             public void onClick(View view)
             {
-                addingToCartList();
+
+                if (state.equals("Order Placed") || state.equals("Order Shipped"))
+                {
+                    Toast.makeText(ProductDetailsActivity.this, "You can purchase more products, once your order is shipped or confirmed.", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    addingToCartList();
+                }
             }
-                                           }
-        );
+        });
 
     }
 
+    @Override
+    protected void onStart()
+    {
+        super.onStart();
+
+        CheckOrderState();
+    }
 
     private void addingToCartList()
     {
         String saveCurrentTime, saveCurrentDate;
+
         Calendar calForDate = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("MM dd, yyyy");
         saveCurrentDate = currentDate.format(calForDate.getTime());
@@ -127,7 +142,7 @@ public class ProductDetailsActivity extends AppCompatActivity
     {
         DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
-        productsRef.child(productID).addValueEventListener(new ValueEventListener() {
+        productsRef.child(productID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
@@ -138,6 +153,9 @@ public class ProductDetailsActivity extends AppCompatActivity
                     productName.setText(products.getPname());
                     productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
+
+            //        productPrice.setText("$" + products.getPrice());
+
                     Picasso.get().load(products.getImage()).into(productImage);
 
                 }
@@ -150,4 +168,37 @@ public class ProductDetailsActivity extends AppCompatActivity
             }
         });
     }
+
+    private void CheckOrderState()
+    {
+        DatabaseReference ordersRef;
+        ordersRef = FirebaseDatabase.getInstance().getReference().child("Orders").child(Prevalent.currentOnlineUser.getPhone());
+
+        ordersRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+            {
+                if (dataSnapshot.exists())
+                {
+                    String shippingState = dataSnapshot.child("state").getValue().toString();
+
+                    if (shippingState.equals("shipped"))
+                    {
+                        state = "Order Shipped";
+                    }
+                    else if (shippingState.equals("not shopped"))
+                    {
+                        state = "Order Placed";
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError)
+            {
+
+            }
+        });
+    }
+
 }
