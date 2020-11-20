@@ -127,7 +127,7 @@ public class ProductDetailsActivity extends AppCompatActivity
     {
         DatabaseReference productsRef = FirebaseDatabase.getInstance().getReference().child("Products");
 
-        productsRef.child(productID).addValueEventListener(new ValueEventListener() {
+        productsRef.child(productID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot)
             {
@@ -138,6 +138,9 @@ public class ProductDetailsActivity extends AppCompatActivity
                     productName.setText(products.getPname());
                     productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
+
+            //        productPrice.setText("$" + products.getPrice());
+
                     Picasso.get().load(products.getImage()).into(productImage);
 
                 }
