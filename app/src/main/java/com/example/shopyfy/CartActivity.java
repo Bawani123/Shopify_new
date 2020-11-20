@@ -89,6 +89,8 @@ public class CartActivity extends AppCompatActivity
                         int oneTypeProductTPrice = (Integer.parseInt(model.getPrice().replaceAll("\\D+",""))) * Integer.parseInt(model.getQuantity());
                         overTotalPrice = overTotalPrice + oneTypeProductTPrice;
 
+                        txtTotalAmount.setText("Total Price = $" + overTotalPrice);
+
                         holder.itemView.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view)
@@ -159,5 +161,11 @@ public class CartActivity extends AppCompatActivity
         recyclerView.setAdapter(adapter);
         adapter.startListening();
 
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        overTotalPrice = 0;
     }
 }
