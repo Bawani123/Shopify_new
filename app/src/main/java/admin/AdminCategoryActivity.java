@@ -1,11 +1,16 @@
-package com.example.shopyfy;
+package admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+
+import com.example.shopyfy.HomeActivity;
+import com.example.shopyfy.MainActivity;
+import com.example.shopyfy.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
 
@@ -13,10 +18,55 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView glasses,hatsCaps,walletsBagsPurses,shoes;
     private ImageView headPhonesHandFree,Laptops,watches,mobilePhones;
 
+    private Button LogoutBtn, CheckOrdersBtn, maintainProductsBtn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
+
+        LogoutBtn = (Button) findViewById(R.id.admin_logout_btn);
+        CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
+        maintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
+
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("admin", "admin");
+                startActivity(intent);
+
+            }
+        });
+
+
+
+        LogoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+
+
+
+            }
+        });
+
+
+        CheckOrdersBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         tShirts = (ImageView)findViewById(R.id.t_shirts);
         sportsTShirts = (ImageView)findViewById(R.id.sport_t_shirts);
@@ -35,7 +85,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminAddNewProductActivity.class);
                 intent.putExtra("category","tShirts");
                 startActivity(intent);
 
