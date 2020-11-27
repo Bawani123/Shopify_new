@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.example.shopyfy.HomeActivity;
-import com.example.shopyfy.MainActivity;
+import Buyers.HomeActivity;
+import Buyers.MainActivity;
 import com.example.shopyfy.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {

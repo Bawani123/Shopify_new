@@ -1,4 +1,4 @@
-package com.example.shopyfy;
+package Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.shopyfy.Model.Cart;
 import com.example.shopyfy.Prevalent.Prevalent;
+import com.example.shopyfy.R;
 import com.example.shopyfy.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
