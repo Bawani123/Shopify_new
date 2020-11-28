@@ -261,7 +261,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
                     {
                         if (task.isSuccessful())
                         {
-                            Intent intent = new Intent(SellerAddNewProductActivity.this, SellerProductCategoryActivity.class);
+                            Intent intent = new Intent(SellerAddNewProductActivity.this, SellerHomeActivity.class);
                             startActivity(intent);
 
                             loadingBar.dismiss();
