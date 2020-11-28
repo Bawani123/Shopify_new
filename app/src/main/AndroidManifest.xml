@@ -29,7 +29,7 @@
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="admin.AdminCategoryActivity" />
-        <activity android:name="admin.AdminAddNewProductActivity" />
+        <activity android:name="admin.SellerAddNewProductActivity" />
         <activity android:name="Buyers.RegisterActivity" />
         <activity android:name="Buyers.LoginActivity" />
         <activity android:name="Buyers.SettinsActivity" />
