@@ -21,7 +21,7 @@ public class SellerProductCategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_add_category);
+        setContentView(R.layout.activity_seller_product_category);
 
 //        LogoutBtn = (Button) findViewById(R.id.admin_logout_btn);
 //        CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
