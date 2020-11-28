@@ -57,46 +57,45 @@ public class AdminCheckNewProductsActivity extends AppCompatActivity
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
                 new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
                     @Override
-                    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model)
+                    protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model)
                     {
                         holder.txtProductName.setText(model.getPname());
                         holder.txtProductDescription.setText(model.getDescription());
                         holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
-                        final Products itemClick = model;
-                        holder.setItemClickListner(new ItemClickListner() {
-                            @Override
-                            public void onClick(View view, int position, boolean isLongClick)
-                            {
-                                final String productID = itemClick.getPid();
+                       holder.itemView.setOnClickListener(new View.OnClickListener() {
+                           @Override
+                           public void onClick(View view)
+                           {
+                               final String productID = model.getPid();
 
-                                CharSequence options[] = new CharSequence[]
-                                        {
-                                                "Yes",
-                                                "No"
-                                        };
+                               CharSequence options[] = new CharSequence[]
+                                       {
+                                               "Yes",
+                                               "No"
+                                       };
 
 
-                                AlertDialog.Builder builder = new AlertDialog.Builder(AdminCheckNewProductsActivity.this);
-                                builder.setTitle("Do you want to Approve this Product. Are you Sure?");
-                                builder.setItems(options, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int position)
-                                    {
-                                        if (position == 0)
-                                        {
-                                            ChangeProductState(productID);
-                                        }
-                                        if (position == 1)
-                                        {
+                               AlertDialog.Builder builder = new AlertDialog.Builder(AdminCheckNewProductsActivity.this);
+                               builder.setTitle("Do you want to Approve this Product. Are you Sure?");
+                               builder.setItems(options, new DialogInterface.OnClickListener() {
+                                   @Override
+                                   public void onClick(DialogInterface dialogInterface, int position)
+                                   {
+                                       if (position == 0)
+                                       {
+                                           ChangeProductState(productID);
+                                       }
+                                       if (position == 1)
+                                       {
 
-                                        }
-                                    }
-                                });
-                                builder.show();
-                            }
-                        });
+                                       }
+                                   }
+                               });
+                               builder.show();
+                           }
+                       });
                     }
 
                     @NonNull
