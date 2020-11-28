@@ -21,8 +21,12 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -43,11 +47,11 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
     private Uri ImageUri;
     private String productRandomKey, downloadImageUrl;
     private StorageReference ProductImagesRef;
-    private DatabaseReference ProductsRef;
+    private DatabaseReference ProductsRef, sellersRef;
     private ProgressDialog loadingBar;
 
 
-
+    private String sName, sAddress, sPhone, sEmail, sID;
 
 
     @Override
@@ -59,6 +63,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
         CategoryName  = getIntent().getExtras().get("category").toString();
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
+        sellersRef = FirebaseDatabase.getInstance().getReference().child("Sellers");
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);
@@ -86,7 +91,26 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
 
 
 
+        sellersRef.child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot)
+                    {
+                        if (dataSnapshot.exists())
+                        {
+                            sName = dataSnapshot.child("name").getValue().toString();
+                            sAddress = dataSnapshot.child("address").getValue().toString();
+                            sPhone = dataSnapshot.child("phone").getValue().toString();
+                            sID = dataSnapshot.child("sid").getValue().toString();
+                            sEmail = dataSnapshot.child("email").getValue().toString();
+                        }
+                    }
 
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                })
 
 
 
@@ -223,6 +247,13 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
         productMap.put("price", Price);
         productMap.put("pname", Pname);
 
+        productMap.put("sellerName", sName);
+        productMap.put("sellerAddress", sAddress);
+        productMap.put("sellerPhone", sPhone);
+        productMap.put("sellerEmail", sEmail);
+        productMap.put("sid", sID);
+        productMap.put("productState", "Not Approved");
+
         ProductsRef.child(productRandomKey).updateChildren(productMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
@@ -246,4 +277,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
                     }
                 });
     }
+
+
+
 }
