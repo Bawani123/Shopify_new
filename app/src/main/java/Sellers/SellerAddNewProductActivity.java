@@ -1,4 +1,4 @@
-package admin;
+package Sellers;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +30,8 @@ import com.google.firebase.storage.UploadTask;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
+
+import admin.AdminCategoryActivity;
 
 public class SellerAddNewProductActivity extends AppCompatActivity {
 

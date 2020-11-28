@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 import Buyers.HomeActivity;
 import Buyers.MainActivity;
+import Sellers.SellerAddNewProductActivity;
+
 import com.example.shopyfy.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {
