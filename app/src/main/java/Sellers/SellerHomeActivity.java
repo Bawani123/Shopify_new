@@ -8,14 +8,24 @@ import android.widget.TextView;
 import com.example.shopyfy.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import Buyers.MainActivity;
 
-public class SellerHomeActivity extends AppCompatActivity {
+public class SellerHomeActivity extends AppCompatActivity
+{
     private TextView mTextMessage;
+    private RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    private DatabaseReference unverifiedProductsRef;
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -61,5 +71,14 @@ public class SellerHomeActivity extends AppCompatActivity {
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mTextMessage = findViewById(R.id.message);
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
+
+        unverifiedProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
+
+        recyclerView = findViewById(R.id.admin_products_checklist);
+        recyclerView.setHasFixedSize(true);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
     }
 }
