@@ -14,7 +14,7 @@ import Buyers.MainActivity;
 
 public class AdminHomeActivity extends AppCompatActivity
 {
-    private Button LogoutBtn, CheckOrdersBtn, maintainProductsBtn;
+    private Button LogoutBtn, CheckOrdersBtn, maintainProductsBtn, checkApproveProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class AdminHomeActivity extends AppCompatActivity
         LogoutBtn = (Button) findViewById(R.id.admin_logout_btn);
         CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
         maintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
+        checkApproveProductsBtn = (Button) findViewById(R.id.check_approve_products_btn);
 
         maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +55,15 @@ public class AdminHomeActivity extends AppCompatActivity
 
 
         CheckOrdersBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(AdminHomeActivity.this, AdminNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        checkApproveProductsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
