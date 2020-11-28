@@ -35,7 +35,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-import admin.AdminCategoryActivity;
+import admin.SellerProductCategoryActivity;
 
 public class SellerAddNewProductActivity extends AppCompatActivity {
 
@@ -57,7 +57,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_add_new_product);
+        setContentView(R.layout.activity_seller_add_new_product);
 
 
         CategoryName  = getIntent().getExtras().get("category").toString();
@@ -261,7 +261,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
                     {
                         if (task.isSuccessful())
                         {
-                            Intent intent = new Intent(SellerAddNewProductActivity.this, AdminCategoryActivity.class);
+                            Intent intent = new Intent(SellerAddNewProductActivity.this, SellerProductCategoryActivity.class);
                             startActivity(intent);
 
                             loadingBar.dismiss();

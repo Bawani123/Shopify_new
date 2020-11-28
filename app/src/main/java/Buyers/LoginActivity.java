@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import admin.AdminCategoryActivity;
+import admin.SellerProductCategoryActivity;
 import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
@@ -153,7 +153,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this,"welcome admin you are logged in sucessfully...",Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, SellerProductCategoryActivity.class);
                                 startActivity(intent);
                             }
                             else if (parentDbName.equals("Users"))
