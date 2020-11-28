@@ -35,8 +35,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-import admin.SellerProductCategoryActivity;
-
 public class SellerAddNewProductActivity extends AppCompatActivity {
 
     private String CategoryName, Description, Price, Pname, saveCurrentDate, saveCurrentTime;

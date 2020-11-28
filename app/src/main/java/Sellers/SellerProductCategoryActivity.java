@@ -1,4 +1,4 @@
-package admin;
+package Sellers;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import Sellers.SellerAddNewProductActivity;
 
 import com.example.shopyfy.R;
 

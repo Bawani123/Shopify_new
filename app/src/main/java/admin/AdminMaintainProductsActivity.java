@@ -23,6 +23,8 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
+import Sellers.SellerProductCategoryActivity;
+
 public class AdminMaintainProductsActivity extends AppCompatActivity
 {
     private Button applyChangesBtn, deleteBtn;

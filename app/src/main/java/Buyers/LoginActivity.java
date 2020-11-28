@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import admin.SellerProductCategoryActivity;
+import Sellers.SellerProductCategoryActivity;
 import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
