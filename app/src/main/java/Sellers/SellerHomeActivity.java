@@ -113,7 +113,7 @@ public class SellerHomeActivity extends AppCompatActivity
                     {
                         holder.txtProductName.setText(model.getPname());
                         holder.txtProductDescription.setText(model.getDescription());
-                        holder.txtProductStatus.setText(model.getProductState());
+                        holder.txtProductStatus.setText("State :  " +model.getProductState());
                         holder.txtProductPrice.setText("Price = " + model.getPrice() + "$");
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 
