@@ -1,4 +1,4 @@
-package com.example.shopyfy;
+package Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.shopyfy.Model.Products;
 import com.example.shopyfy.Prevalent.Prevalent;
+import com.example.shopyfy.R;
 import com.example.shopyfy.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -74,7 +75,7 @@ public class HomeActivity extends AppCompatActivity
             {
                 if (!type.equals("admin"))
                 {
-                    Intent intent = new Intent(HomeActivity.this,CartActivity.class);
+                    Intent intent = new Intent(HomeActivity.this, CartActivity.class);
                     startActivity(intent);
                 }
 
@@ -120,7 +121,7 @@ public class HomeActivity extends AppCompatActivity
 
             FirebaseRecyclerOptions<Products> options =
                     new FirebaseRecyclerOptions.Builder<Products>()
-                    .setQuery(ProductsRef, Products.class)
+                    .setQuery(ProductsRef.orderByChild("productState").equalTo("Approved"), Products.class)
                     .build();
 
             FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
@@ -248,7 +249,7 @@ public class HomeActivity extends AppCompatActivity
         {
             if (!type.equals("admin"))
             {
-                Intent intent = new Intent(HomeActivity.this,SearchProductsActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SearchProductsActivity.class);
                 startActivity(intent);
 
 

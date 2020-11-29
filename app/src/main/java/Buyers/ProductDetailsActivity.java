@@ -1,4 +1,4 @@
-package com.example.shopyfy;
+package Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
-import com.example.shopyfy.Model.Cart;
 import com.example.shopyfy.Model.Products;
 import com.example.shopyfy.Prevalent.Prevalent;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.example.shopyfy.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
