@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/welcome4"
-    tools:context=".MainActivity">
+    tools:context="Buyers.MainActivity">
 
     <ImageView
         android:id="@+id/app_logo"
@@ -51,6 +51,21 @@
         android:text="Join Now"
 
         android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/seller_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Become a Seller"
+        android:layout_alignParentTop="false"
+        android:layout_marginRight="19dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/background_light"/>
+
+
 
 
 </RelativeLayout>
