@@ -51,7 +51,8 @@ public class SellerHomeActivity extends AppCompatActivity
             switch (item.getItemId())
             {
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    Intent intentHome = new Intent(SellerHomeActivity.this, SellerHomeActivity.class);
+                    startActivity(intentHome);
                     return true;
 
                 case R.id.navigation_add:
