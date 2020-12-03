@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="Sellers.SellerProductCategoryActivity">
+    tools:context="sellers.SellerProductCategoryActivity">
 
 
     <TextView
@@ -37,27 +37,27 @@
         >
         <ImageView
             android:id="@+id/t_shirts"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/tshirts"/>
+            android:src="@drawable/shirt55"/>
 
         <ImageView
             android:id="@+id/sport_t_shirts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sports"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tshirt55"/>
 
         <ImageView
             android:id="@+id/female_dresses"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/female_dresses"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/dress55"/>
 
         <ImageView
             android:id="@+id/sweathers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/sweather"/>
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/warm55"/>
     </LinearLayout>
 
     <LinearLayout
@@ -75,26 +75,26 @@
             android:id="@+id/glasses"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/glasses"/>
+            android:src="@drawable/glass55"/>
 
         <ImageView
             android:id="@+id/purse_bags_wallets"
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/purses_bags"/>
+            android:src="@drawable/bag55"/>
 
         <ImageView
             android:id="@+id/hats_caps"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/hats"/>
+            android:src="@drawable/hat55"/>
 
         <ImageView
             android:id="@+id/shoes"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/shoess"
-            android:layout_marginStart="16dp"/>
+            android:src="@drawable/shoe55"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -111,26 +111,26 @@
             android:id="@+id/headphones_handfree"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/headphoness"/>
+            android:src="@drawable/headset55"/>
 
         <ImageView
             android:id="@+id/laptop_pc"
-            android:layout_width="90dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/laptops"/>
+            android:src="@drawable/laptop55"/>
 
         <ImageView
             android:id="@+id/watches"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/watches"/>
+            android:src="@drawable/watch55"/>
 
         <ImageView
             android:id="@+id/mobilephones"
-            android:layout_width="70dp"
+            android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/mobiles"
-            android:layout_marginStart="16dp"/>
+            android:src="@drawable/mobile55"/>
+
     </LinearLayout>
 
 

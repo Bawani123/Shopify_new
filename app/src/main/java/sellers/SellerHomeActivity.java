@@ -1,4 +1,4 @@
-package Sellers;
+package sellers;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.shopyfy.Model.Products;
 import com.example.shopyfy.R;
 import com.example.shopyfy.ViewHolder.ItemViewHolder;
-import com.example.shopyfy.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,8 +29,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import Buyers.MainActivity;
-import admin.AdminCheckNewProductsActivity;
+import buyers.MainActivity;
 
 public class SellerHomeActivity extends AppCompatActivity
 {

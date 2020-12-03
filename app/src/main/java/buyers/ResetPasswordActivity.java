@@ -1,4 +1,4 @@
-package Buyers;
+package buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;

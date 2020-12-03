@@ -1,4 +1,4 @@
-package Sellers;
+package sellers;
 
 import androidx.appcompat.app.AppCompatActivity;
 

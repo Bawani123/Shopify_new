@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login2"
-    tools:context="Buyers.LoginActivity">
-    
+    android:background="@drawable/zz3"
+    tools:context="buyers.LoginActivity">
+
     <ImageView
         android:id="@+id/login_applogo"
         android:layout_width="300dp"
@@ -17,7 +17,7 @@
         android:layout_marginTop="200dp"
         />
 
-    
+
     <EditText
         android:id="@+id/login_phone_number_input"
         android:layout_width="match_parent"
@@ -29,8 +29,8 @@
         android:layout_marginRight="15dp"
         android:hint="Phone Number"
         android:inputType="number"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="17sp"
         android:textStyle="bold"
 
@@ -48,8 +48,8 @@
         android:layout_marginTop="6dp"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/colorPrimaryDark"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
         android:textSize="17sp"
         android:textStyle="bold"
 
@@ -64,14 +64,14 @@
         android:layout_below="@+id/login_password_input"
         android:layout_marginTop="5dp"
         >
-        
+
         <com.rey.material.widget.CheckBox
             android:id="@+id/remember_me_chkb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
            style="@style/Material.Drawable.CheckBox"
             android:text="Remember me"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/black"
             app:cbd_strokeColor="@color/colorPrimaryDark"
             android:gravity="center_vertical"
             android:textSize="16sp"
@@ -87,7 +87,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forget Password?"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@android:color/black"
             android:textSize="17sp"
             android:textStyle="bold"
             android:layout_marginLeft="80dp"
@@ -121,7 +121,7 @@
         android:text="I am an admin?"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/login_btn"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"
@@ -137,7 +137,7 @@
         android:text="I am not an admin?"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/login_btn"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginLeft="80dp"

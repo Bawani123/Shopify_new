@@ -9,8 +9,8 @@ import android.widget.Button;
 
 import com.example.shopyfy.R;
 
-import Buyers.HomeActivity;
-import Buyers.MainActivity;
+import buyers.HomeActivity;
+import buyers.MainActivity;
 
 public class AdminHomeActivity extends AppCompatActivity
 {
