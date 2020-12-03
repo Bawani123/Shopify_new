@@ -1,4 +1,4 @@
-package Buyers;
+package buyers;
 
 import android.content.Intent;
 import android.os.Bundle;

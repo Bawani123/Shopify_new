@@ -1,4 +1,4 @@
-package Buyers;
+package buyers;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

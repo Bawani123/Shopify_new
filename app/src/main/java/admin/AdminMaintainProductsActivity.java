@@ -23,7 +23,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.HashMap;
 
-import Sellers.SellerProductCategoryActivity;
+import sellers.SellerProductCategoryActivity;
 
 public class AdminMaintainProductsActivity extends AppCompatActivity
 {

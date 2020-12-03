@@ -1,4 +1,4 @@
-package Buyers;
+package buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,8 +23,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import Sellers.SellerHomeActivity;
-import Sellers.SellerRegistrationActivity;
+import sellers.SellerHomeActivity;
+import sellers.SellerRegistrationActivity;
 import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity

@@ -1,4 +1,4 @@
-package Sellers;
+package sellers;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -61,7 +61,7 @@ public class SellerAddNewProductActivity extends AppCompatActivity {
         CategoryName  = getIntent().getExtras().get("category").toString();
         ProductImagesRef = FirebaseStorage.getInstance().getReference().child("Product Images");
         ProductsRef = FirebaseDatabase.getInstance().getReference().child("Products");
-        sellersRef = FirebaseDatabase.getInstance().getReference().child("Sellers");
+        sellersRef = FirebaseDatabase.getInstance().getReference().child("sellers");
 
         AddNewProductButton = (Button) findViewById(R.id.add_new_product);
         InputProductImage = (ImageView) findViewById(R.id.select_product_image);

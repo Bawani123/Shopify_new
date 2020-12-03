@@ -1,4 +1,4 @@
-package Sellers;
+package sellers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.HashMap;
-
-import Buyers.MainActivity;
 
 public class SellerRegistrationActivity extends AppCompatActivity
 {
@@ -110,7 +108,7 @@ public class SellerRegistrationActivity extends AppCompatActivity
                                 sellerMap.put("address", address);
                                 sellerMap.put("name", name);
 
-                                rootref.child("Sellers").child(sid).updateChildren(sellerMap)
+                                rootref.child("sellers").child(sid).updateChildren(sellerMap)
                                         .addOnCompleteListener(new OnCompleteListener<Void>() {
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task)
